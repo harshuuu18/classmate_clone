@@ -1,0 +1,144 @@
+.CNSlides {
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#StepOne {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2% 5% 0 10%;
+	position: relative;
+	.SOFImage {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+	}
+	.SODiv {
+		width: 40vw;
+		height: 180px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			width: 40%;
+			height: 100%;
+			border: 2px solid #d2d2d2;
+			border-radius: 2px;
+			box-shadow: #64646f33 0px 7px 29px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+			transition: all 0.2s linear;
+			position: relative;
+			cursor: pointer;
+			img {
+				width: 70px;
+			}
+
+			&:hover {
+				border-color: #ffdd40;
+			}
+		}
+	}
+}
+
+.checkSpan {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: #ffdd40;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.chooseQuantity {
+	width: 150px;
+	height: 100px;
+	border: 2px solid #d2d2d2;
+	border-radius: 2px;
+	box-shadow: #64646f33 0px 7px 29px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	transition: all 0.2s linear;
+	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		border-color: #ffdd40;
+	}
+}
+
+.main {
+	background-color: #f7f3ed;
+	height: 77.5vh;
+	padding: 4% 7.5%;
+}
+.main h2 {
+	font-size: 26px;
+	margin-bottom: 20px;
+}
+
+.main h3 {
+	font-size: 26px;
+	font-family: "Open Sans";
+}
+.demonstration {
+	display: flex;
+	width: 700px;
+	justify-content: space-between;
+	height: 600px;
+}
+
+.card {
+	width: 255px;
+	height: 255px;
+}
+.hero-section {
+	height: 77.5vh;
+	background-image: url("../../Assets/banner.jpg");
+	position: relative;
+}
+.heading {
+	font-size: 80px;
+	font-weight: 800;
+	color: white;
+}
+
+.hero-section button {
+	width: 200px;
+	height: 90px;
+	border: 4px #ffd597 solid;
+	border-radius: 200px;
+	color: #bf8917;
+	margin-top: 20px;
+	background-color: #f2f2f2;
+	font-size: 45px;
+}
+#yellow {
+	color: #ffff00;
+}
+.heading-section {
+	/* background-color: #fff; */
+	position: absolute;
+	top: 40%;
+	transform: translate(0, -50%);
+	padding-left: 7.5%;
+}
+
+.image img {
+	/* background-color: #FFD597; */
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

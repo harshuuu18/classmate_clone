@@ -1,0 +1,197 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#HomePage {
+	width: 100vw;
+}
+.mySwiper {
+	.mySwiperSlide {
+		height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url(https://images.unsplash.com/photo-1501618669935-18b6ecb13d6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=849&q=80);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.CustomProgressBar {
+		width: 100vw;
+		height: 100px;
+		// background: #ffff;
+		position: absolute;
+		bottom: 10px;
+		z-index: 100;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.CPLeft,
+		.CPRight {
+			width: 10%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ffdd40;
+			font-size: 20px;
+			span {
+				min-width: 44px !important;
+				min-height: 44px !important;
+				background: #ffff;
+				border-radius: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			}
+		}
+		.CpProgress {
+			width: 70%;
+			height: 80%;
+			background: #fff;
+			border-radius: 50px;
+			box-shadow: #64646f33 0px 7px 29px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 10px;
+			.progress {
+				background: #f1f1f1;
+				justify-content: flex-start;
+				border-radius: 100px;
+				align-items: center;
+				position: relative;
+
+				display: flex;
+				height: 30px;
+
+				width: 100%;
+				span {
+					width: 30px;
+					height: 30px;
+					background: #ffff;
+					box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+					border-radius: 100%;
+					position: absolute;
+					left: 9%;
+				}
+			}
+
+			.progress-value {
+				animation: load 3s normal forwards;
+				box-shadow: 0 10px 40px -10px #fff;
+				border-radius: 100px;
+				background: #ffdd40;
+				height: 30px;
+
+				transition: all 1s;
+			}
+
+			// @keyframes load {
+			// 	0% {
+			// 		width: 0;
+			// 	}
+			// 	100% {
+			// 		width: 20%;
+			// 	}
+			// }
+		}
+	}
+}
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical
+	> .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+	top: unset !important;
+	bottom: 0 !important;
+}
+// 1f5156
+
+#DesignNoteBook {
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner {
+	width: 88%;
+	margin: 100px auto;
+	background-color: #f1f1f1;
+	height: 450px;
+	border-radius: 40px;
+}
+.testimonials {
+	width: 88%;
+	margin: 0 auto;
+	/* background-color: aqua; */
+	height: 450px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.testimonialCard {
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+
+.upper {
+	height: 175px;
+	background: linear-gradient(to right, #f7ca69, #f7ba50, #f7b243);
+	border-radius: 40px 40px 0 0;
+	padding: 35px 30px 0 30px;
+}
+.lower {
+	height: 125px;
+	background-color: #f2f2f2;
+	border-radius: 0 0 40px 40px;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.stars i {
+	font-size: 12px;
+}
+
+.testimonial-name {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.testimonial-subname {
+	font-size: 10px;
+}
+
+.testimonial-content {
+	text-align: center;
+	font-size: 11px;
+	line-height: 17px;
+	color: white;
+}
+.testimonial-image {
+	position: absolute;
+	height: 65px;
+	width: 65px;
+	background-color: rgb(48, 48, 48);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border: solid 5px #f2f2f2;
+	border-radius: 50%;
+}

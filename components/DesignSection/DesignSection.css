@@ -1,0 +1,25 @@
+.main{
+    background-color: #F7F3ED;
+    height: 77.5vh;
+    padding: 4% 7.5%;
+}
+.main h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.main h3{
+    font-size: 26px;
+    font-family: 'Open Sans';
+}
+.demonstration{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.card{
+    width: 255px;
+    height: 255px;
+}

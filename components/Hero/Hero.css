@@ -1,0 +1,38 @@
+.hero-section{
+    height: 77.5vh;
+    background-image: url('../../Assets/banner.jpg');
+    position: relative;
+}
+.heading{
+    font-size: 80px;
+    font-weight: 800;
+    color: white;
+}
+
+.hero-section button{
+    width: 200px;
+    height: 90px;
+    border: 4px #FFD597 solid;
+    border-radius: 200px;
+    color: #BF8917;
+    margin-top: 20px;
+    background-color: #F2F2F2;
+    font-size: 45px;
+}
+#yellow{
+    color: #FFFF00;
+}
+.heading-section{
+    /* background-color: #fff; */
+    position: absolute;
+    top: 40%;
+    transform: translate(0,-50%);
+    padding-left: 7.5%;
+}
+
+.image img{
+    /* background-color: #FFD597; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
