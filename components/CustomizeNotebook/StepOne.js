@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
+import RecoilPersister from '../../helpers/recoil-persister'
 
 import { OneStep } from '../../recoil/customize.atom'
 
@@ -7,6 +8,7 @@ import { OneStep } from '../../recoil/customize.atom'
 function StepOne() {
 
     const [val, setVal] = useRecoilState(OneStep)
+
     let data = [
         {
             title: "Number of Pages",
@@ -25,6 +27,7 @@ function StepOne() {
 
     return (
         <div className='CNSlides' >
+            <RecoilPersister recoilState={OneStep} />
             <div id='StepOne' >
                 <h2>DESIGN YOUR NOTEBOOK IN FEW CLICK</h2>
                 <br />

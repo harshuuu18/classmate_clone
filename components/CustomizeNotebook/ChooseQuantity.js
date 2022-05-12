@@ -1,21 +1,24 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 import { SwiperSlide } from 'swiper/react'
-import { Five } from '../../recoil/customize.atom'
+import RecoilPersister from '../../helpers/recoil-persister'
+import { canvasData, Five } from '../../recoil/customize.atom'
 
 function StepFive() {
 
     const [val, setVal] = useRecoilState(Five)
+    const [cvData, setCvData] = useRecoilState(canvasData)
+
     let data = [
         {
             title: "1",
-            value: "134 Pages",
+            value: 1,
             id: "1",
             img: "https://cdn-icons-png.flaticon.com/512/864/864685.png"
         },
         {
             title: "2",
-            value: "174 Pages",
+            value: 9,
             id: "2",
             img: "https://cdn-icons-png.flaticon.com/512/864/864685.png"
 
@@ -24,6 +27,8 @@ function StepFive() {
 
     return (
         <div className='CNSlides' >
+            <RecoilPersister recoilState={Five} extra={true} />
+
             <div id='StepOne' >
                 <h2>DESIGN YOUR NOTEBOOK IN FEW CLICK</h2>
                 <br />
@@ -38,6 +43,17 @@ function StepFive() {
                                     setVal({
                                         title, value
                                     })
+
+
+                                    let fkArray = Array.from({ length: value }).map((e, i) => {
+                                        return {
+                                            id: i,
+                                            canvas: {}
+                                        }
+                                    })
+                                    // console.log('fkArray', fkArray)
+                                    setCvData(fkArray)
+
                                 }} style={{ borderColor: val.value == value ? "#ffdd40" : "" }}  >
                                     {
                                         val.value == value ?

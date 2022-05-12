@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 import { SwiperSlide } from 'swiper/react'
+import RecoilPersister from '../../helpers/recoil-persister'
 import { Three } from '../../recoil/customize.atom'
 
 function StepThree() {
@@ -22,6 +23,8 @@ function StepThree() {
     ]
     return (
         <div className='CNSlides' >
+            <RecoilPersister recoilState={Three} />
+
             <div id='StepOne' >
                 <h2>DESIGN YOUR NOTEBOOK IN FEW CLICK</h2>
                 <br />

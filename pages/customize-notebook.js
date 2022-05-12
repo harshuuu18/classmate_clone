@@ -15,44 +15,78 @@ import StepThree from "../components/CustomizeNotebook/ChooseRuling";
 import StepFour from "../components/CustomizeNotebook/ChooseBinding";
 import StepFive from "../components/CustomizeNotebook/ChooseQuantity";
 import DesignNoteBook from "../components/CustomizeNotebook/design-notebook";
+import InfoStep from "../components/CustomizeNotebook/Infos";
+import BeginDesgin from "../components/CustomizeNotebook/BeginDesgin";
+import NoteBookDesginModal from "../components/CustomizeNotebook/NoteBookDesginModal";
+import NoteBookDesginModal2 from "../components/CustomizeNotebook/NoteBookDesginModal copy";
+import Head from "next/head";
+import { useRecoilState } from "recoil";
+import { showCanvas } from "../recoil/customize.atom";
+import NoteBookDesginModal3 from "../components/CustomizeNotebook/NoteBookDesginModal3";
 export default function CustomizeNotebook() {
+
+	const [cv, setCv] = useRecoilState(showCanvas)
+
 	return (
-		<div id='HomePage'>
-			<Swiper
-				className='mySwiper'
-				allowTouchMove={false}
-				onSlideChange={(e) => {
+		<>
+			<Head>
 
-					console.log("e", e.act);
-				}}>
-				<SwiperSlide >
-					<StepOne />
-				</SwiperSlide>
-				<SwiperSlide  >
-					<StepTwo />
-				</SwiperSlide>
+				<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+					rel="stylesheet" />
+			</Head>
+			<div id='HomePage'>
 
-				<SwiperSlide  >
-					<StepThree />
-				</SwiperSlide>
+				{
+					cv &&
+					<NoteBookDesginModal3 />
+				}
+				<Swiper
+					className='mySwiper'
+					allowTouchMove={false}
+					onSlideChange={(e) => {
+						localStorage.setItem("activeIndex", e.activeIndex)
 
-				<SwiperSlide  >
-					<StepFour />
-				</SwiperSlide>
-
-				<SwiperSlide  >
-					<StepFive />
-				</SwiperSlide>
+					}}>
 
 
-				<SwiperSlide>
-					<DesignNoteBook />
-				</SwiperSlide>
+					<SwiperSlide >
+						<StepOne />
+					</SwiperSlide>
+					<SwiperSlide  >
+						<StepTwo />
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<StepThree />
+					</SwiperSlide>
+
+					<SwiperSlide  >
+						<StepFour />
+					</SwiperSlide>
+
+					<SwiperSlide  >
+						<StepFive />
+					</SwiperSlide>
+
+					<SwiperSlide >
+						<InfoStep />
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<BeginDesgin />
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<DesignNoteBook />
+					</SwiperSlide>
 
 
 
-				<ProgressBar />
-			</Swiper>
-		</div>
+
+
+					<ProgressBar />
+				</Swiper>
+			</div>
+		</>
 	);
 }

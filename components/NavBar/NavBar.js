@@ -22,7 +22,7 @@ function NavBar() {
 						<li className='nav-item'>
 							<Link href={"/"}>
 								<a
-									activeClassName='active'
+									activeclassname='active'
 									className='nav-links'
 									onClick={click ? handleClick : null}>
 									Home
@@ -32,7 +32,7 @@ function NavBar() {
 						<li className='nav-item'>
 							<Link href={"/customize-notebook"}>
 								<a
-									activeClassName='active'
+									activeclassname='active'
 									className='nav-links'
 									onClick={click ? handleClick : null}>
 									Customize Notebook
@@ -43,7 +43,7 @@ function NavBar() {
 							<a
 								exact
 								to='/blog'
-								activeClassName='active'
+								activeclassname='active'
 								className='nav-links'
 								onClick={click ? handleClick : null}>
 								Blog
@@ -53,7 +53,7 @@ function NavBar() {
 							<a
 								exact
 								to='/contact'
-								activeClassName='active'
+								activeclassname='active'
 								className='nav-links'
 								onClick={click ? handleClick : null}>
 								Contact Us
